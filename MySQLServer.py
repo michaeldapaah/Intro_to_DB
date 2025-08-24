@@ -1,5 +1,4 @@
 import mysql.connector
-from mysql.connector import Error
 
 try:
     # First connection to create the database
@@ -35,7 +34,7 @@ try:
 
            
 
-except Error as e:
+except mysql.connector.Error as e:
     print("Error while connecting to MySQL:", e)
 
 finally:
