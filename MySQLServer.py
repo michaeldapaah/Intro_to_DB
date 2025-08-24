@@ -18,8 +18,7 @@ try:
         CREATE DATABASE IF NOT EXISTS alx_book_store
         """)
         print("Database 'alx_book_store' created successfully!")
-        mycursor.close()
-        mydb.close()
+        
 
 
         # connect the database just created
@@ -31,6 +30,11 @@ try:
     )
 
 except Error as e:
-    print(e)
+    print("Error while connecting to MySQL", e)
+
+finally:
+    # mycursor.close()
+    mydb.close()
+    print("MySQL connection is closed")
 
 
